@@ -27,13 +27,13 @@ then \
 fi
 
 # Handle models 
-RUN ln -sf /privateGPT-container/machine_learning_models/MODELS /privateGPT-container/privateGPT/models && python /privateGPT-container/set_model.py
+RUN ln -sf /privateGPT-container/machine_learning_models/MODELS /privateGPT-container/privateGPT/models && python3 /privateGPT-container/set_model.py
 
 # Link document folder
 RUN ln -sf /privateGPT-container/documents /privateGPT-container/privateGPT/source_documents
 
 # Setting up privateGPT environment
-RUN source /privateGPT-container/venv/bin/activate && pip install -r /privateGPT-container/privateGPT/requirements.txt
+RUN source /privateGPT-container/venv/bin/activate && python3 -m pip install -r /privateGPT-container/privateGPT/requirements.txt
 
 # Start privateGPT
 CMD ["/bin/bash", "run_privateGPT.sh"]
