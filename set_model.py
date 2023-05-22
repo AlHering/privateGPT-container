@@ -9,7 +9,7 @@ import os
 import json
 
 
-model = os.environ.get("MODEL_TO_USE", "eachadea_ggml-vicuna-13b-1.1/ggml-vicuna-13b-1.1-q4_3.bin")
+model = os.environ.get("MODEL_TO_USE", "eachadea_ggml-vicuna-7b-1.1/ggml-vicuna-7b-1.1-q4_2.bin")
 shared_model_folder = "/privateGPT-container/machine_learning_models/MODELS"
 local_model_target = "/privateGPT-container/privateGPT/models"
 env_path = "/privateGPT-container/privateGPT/.env"
