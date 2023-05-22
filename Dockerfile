@@ -33,7 +33,7 @@ RUN ln -sf /privateGPT-container/machine_learning_models/MODELS /privateGPT-cont
 RUN ln -sf /privateGPT-container/documents /privateGPT-container/privateGPT/source_documents
 
 # Setting up privateGPT environment
-RUN source /privateGPT-container/venv/bin/activate && python3 -m pip install -r /privateGPT-container/privateGPT/requirements.txt
+RUN . /privateGPT-container/venv/bin/activate && python3 -m pip install -r /privateGPT-container/privateGPT/requirements.txt
 
 # Start privateGPT
 CMD ["/bin/bash", "run_privateGPT.sh"]
