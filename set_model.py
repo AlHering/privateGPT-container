@@ -22,7 +22,7 @@ if not os.path.exists(local_model_target):
 
 data_path = os.path.join(shared_model_folder, "data.json")
 if os.path.exists(data_path):
-    model_data = json.load(open(, 'r', encoding='utf-8'))[model]
+    model_data = json.load(open(data_path, 'r', encoding='utf-8'))[model]
 else:
     model_data = {"type": "LlamaCpp"}
 
