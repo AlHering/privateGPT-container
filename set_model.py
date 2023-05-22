@@ -5,7 +5,6 @@
 *            (c) 2023 Alexander Hering             *
 ****************************************************
 """
-import sys
 import os
 import json
 
