@@ -10,7 +10,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ADD ./ privateGPT-container/
 WORKDIR /privateGPT-container
 ENV RUNNING_IN_DOCKER True
-ENV MODEL_TO_USE="eachadea_ggml-vicuna-7b-1.1/ggml-vicuna-7b-1.1-q4_2.bin"
+ENV MODEL_TO_USE="eachadea_ggml-vicuna-13b-1.1/ggml-vicuna-13b-1.1-q4_2.bin"
 COPY . .
 
 # Install prerequisits
